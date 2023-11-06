@@ -1,0 +1,33 @@
+main{
+  display: flex;
+  justify-content:center;  
+  width: 100%;
+}
+form{
+  display: flex;
+  justify-content:center; 
+}
+header{
+  justify-content:center; 
+  text-align: center;
+}
+.characters{
+  display: grid;
+  list-style: none;
+  margin: 0px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 10px;
+}
+
+.characters img{
+  border-radius: 10px;
+}
+
+.characters h3{
+  margin: 0px
+}
+.characters p{
+  margin: 0px
+}
+
