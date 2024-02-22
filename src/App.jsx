@@ -3,13 +3,11 @@
 import { useCallback, useState } from 'react'
 import './App.css'
 
-import { Characteres } from './components/Characteres'
-//import { Search } from './components/Search'
-import { useCharacters } from './hook/useCharacters'
-import { useSearch } from './hook/useSearch'
+import { Characteres } from './components/Characteres.jsx'
+// import { Search } from './components/Search.jsx'
+import { useCharacters } from './hook/useCharacters.js'
+import { useSearch } from './hook/useSearch.js'
 import debounce from 'just-debounce-it'
-
-
 
 function App() {
 
@@ -33,6 +31,7 @@ function App() {
 
   const { query, setQuery, error } = useSearch()
   const { characters, getCharacter, loading } = useCharacters(query,sort)
+
 
   const handelSubmit = (event) => {
     event.preventDefault()
@@ -59,11 +58,11 @@ function App() {
     <>
       <header>
         <h2>Buscador de personajes</h2>
-        <form onSubmit={handelSubmit}>
+         <form onSubmit={handelSubmit}>
           <input autoComplete="off" onChange={handelChange} name="query" type="text" placeholder='Buscar...' />
           <input type="checkbox" onChange={handelSort} checked={sort}/>
           <button type="submit">Buscar</button>
-        </form>
+        </form> 
         <span>{error}</span>
       </header>
       <main>

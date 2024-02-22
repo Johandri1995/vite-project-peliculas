@@ -9,7 +9,6 @@ export function useCharacters(search = "",sort) {
     const [loading,setLoading] = useState(false)
     const busquedaPrevia = useRef(search)
 
-
     const getCharacter = useCallback(
          async (search) => {
 
